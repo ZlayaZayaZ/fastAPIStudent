@@ -1,6 +1,6 @@
 
 Настройка зависимостей:
-pip install -r req.txt
+pip install -r requirements.txt
 
 Запуск приложения (выполнять из корневой директории):
 uvicorn app.main:app
