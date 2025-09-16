@@ -28,3 +28,16 @@ create database fast_api with owner zlayazayaz;
 
 Запуск базы данных PostgreSQL:
 docker-compose up -d
+
+Для создания миграций нам нужно зайти в папку «app» через консоль (cd app) и там выполнить команду:
+alembic init -t async migration
+после чего сгенерированный файл alembic.ini вынести в корень репозитория
+
+Команда для создании миграции базы данных:
+alembic revision --autogenerate -m "Initial revision"
+
+Чтобы применить сгенерированные миграции:
+alembic upgrade head
+
+Чтобы откатить изменения:
+alembic downgrade -1
